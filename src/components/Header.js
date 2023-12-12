@@ -1,24 +1,25 @@
-import { LuBook } from "react-icons/lu";
-import { FaRegMoon } from "react-icons/fa";
-import { RxSwitch } from "react-icons/rx";
+import { PiBooksLight } from 'react-icons/pi';
+import { IoMoonOutline } from 'react-icons/io5';
+import { IoSunnyOutline } from 'react-icons/io5';
 
-function Header() {
+const Header = () => {
+  const toggleDarkMode = () => {
+    console.log('CLICK');
+    document.body.classList.toggle('dark');
+  };
+
   return (
-    <div className="flex justify-between my-5">
-      <LuBook size={30} />
-      <div className="right flex ">
-        <select className="mr-10">
-          <option value="Serif">Serif</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <RxSwitch className="mr-3" size={30} />
-        <FaRegMoon size={30} />
+    <div className='flex items-center justify-between text-xl mb-4 mt-3'>
+      <div className='flex items-center'>
+        <PiBooksLight className='text-4xl mr-1' />
+        <span className='text-xs text-slate-400'>Dictionary</span>
+      </div>
+      <div className='flex items-center' onClick={toggleDarkMode}>
+        <IoMoonOutline className='mr-2' />
+        <IoSunnyOutline />
       </div>
     </div>
   );
-}
+};
 
 export default Header;

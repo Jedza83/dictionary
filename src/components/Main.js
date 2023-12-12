@@ -11,7 +11,7 @@ function Main() {
     <div className="mx-auto max-w-3xl md:my-20 px-5">
       <Header />
       <Search />
-      <Keyboard />
+      {/*  <Keyboard /> */}
       <Line />
       <Meaning />
       <Verb />
